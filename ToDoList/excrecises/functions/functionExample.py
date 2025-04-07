@@ -1,8 +1,13 @@
 
-def getTodos():
-    with open('todos.txt', 'r') as file_local:
+def getTodos(filepath):
+    with open(filepath, 'r') as file_local:
         todos_local = file_local.readlines()
     return todos_local
+
+
+def writeTodos(filepath, local_todos):
+    with open(filepath, 'w') as file_local:
+        file_local.writelines(local_todos)
 
 
 user_prompt = "Type ADD or SHOW or EDIT or COMPLETE or EXIT:"
@@ -17,19 +22,18 @@ while True:
             todo = user_action[4:]
 
 
-            todos = getTodos()
+            todos = getTodos(filepath='todos.txt')
 
 
             todos.append(todo + "\n")
 
             # store list in text file
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            writeTodos('todos.txt', todos)
 
 
     elif user_action.startswith('SHOW'):
 
-        todos = getTodos()
+        todos = getTodos('todos.txt')
 
         for index, item in enumerate(todos):
             item = item.replace("\n", "")
@@ -44,14 +48,12 @@ while True:
 
             number = number - 1
 
-            todos = getTodos()
+            todos = getTodos('todos.txt')
 
             new_todo = input("Enter new TODO")
             todos[number] = new_todo + '\n'
 
-
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            writeTodos('todos.txt', todos)
 
         except ValueError:
             print('Your command is not valid')
@@ -62,14 +64,13 @@ while True:
         try:
             number = int((user_action[9:]))
 
-            todos = getTodos()
+            todos = getTodos('todos.txt')
 
             index = number - 1
             todos_to_remove = todos[index].strip('\n')
             todos.pop(index)
 
-            with open('todos.txt', 'w') as file:
-                file.writelines(todos)
+            writeTodos('todos.txt', todos)
 
             message = f"TODO {todos_to_remove} was removed from the list."
             print(message)

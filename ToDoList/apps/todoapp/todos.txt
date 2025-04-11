@@ -3,3 +3,5 @@ CINNAMON-TOAST-CRUNCH
 A NEW SKILL
 BANANA
 CHEESE
+build-app
+destroy fat

@@ -10,9 +10,11 @@ list_box = sg.Listbox(values=functions.get_todos(), key='todos',
 
 edit_button = sg.Button("Edit")
 
+layout = [[label], [input_box, add_button], [list_box, edit_button]]
+
 # Displays the window
 window = sg.Window("TODO APP",
-                   layout=[[label], [input_box, add_button], [list_box, edit_button]],
+                   layout=layout,
                    font=('Helvetica', 20))
 
 while True:
@@ -43,5 +45,6 @@ while True:
 
         case sg.WIN_CLOSED:
             break
+        # exit() terminates program entirely
 
 window.close()

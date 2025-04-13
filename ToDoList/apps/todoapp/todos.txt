@@ -1,12 +1,6 @@
-update-chicken
-A NEW SKILL
-BANANA
-garage-complete
 build-app-v2
 destroy fat
-gjf;dgd
 fdfd
-gfdfd
 another new skill
 clean garage
 clean garagev2

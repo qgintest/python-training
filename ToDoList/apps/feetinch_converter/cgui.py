@@ -12,10 +12,12 @@ convert_button = sg.Button("Convert")
 exit_button = sg.Button('Exit')
 meter_output = sg.Text(key="Output", text_color="white")
 
+col1 = sg.Column([[enter_feet_label], [enter_inches_label]])
+col2 = sg.Column([[enter_feet_input_box], [enter_inches_input_box]])
+col3 = sg.Column([[convert_button], [exit_button], [meter_output]])
+
 window = sg.Window("Converter",
-                   layout=[[enter_feet_label, enter_feet_input_box],
-                           [enter_inches_label, enter_inches_input_box],
-                           [convert_button, exit_button, meter_output]])
+                   layout=[[col1, col2, col3]])
 
 while True:
     event, values = window.read() # Displays the window

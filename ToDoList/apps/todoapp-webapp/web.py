@@ -21,8 +21,13 @@ st.subheader("This is my TODO App")
 st.write("add items one a a time")
 
 
-for todo in todos:
-    st.checkbox(todo)
+for index, todo in enumerate(todos):
+    checkbox = st.checkbox(todo, key=todo)
+    if checkbox:
+        todos.pop(index)
+        functions.write_todos(todos)
+        del st.session_state[todo]
+        st.rerun()
 
 st.text_input(label="Enter a TODO: ", placeholder="Add a TODO",
               on_change=add_todo, key="new_todo")

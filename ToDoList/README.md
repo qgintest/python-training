@@ -4,3 +4,5 @@
 `pip install pyinstaller` third party used to create executable files
 
 `py -m PyInstaller --onefile --windowed --clean apps/todoapp/gui.py` windows command to install executable
+
+`streamlit run apps/todoapp-webapp/web.py` Run web app version of TODO

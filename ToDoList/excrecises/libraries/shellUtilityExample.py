@@ -1,4 +1,4 @@
 import shutil
 
 
-shutil.make_archive("output", "zip", "files")
+shutil.make_archive("archive", "zip", "files")

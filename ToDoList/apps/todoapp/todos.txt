@@ -1,6 +1,0 @@
-build-app-v2
-destroy fat
-fdfd
-another new skill
-clean garage
-clean garagev2

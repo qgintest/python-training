@@ -4,7 +4,7 @@
 #
 # 2. prints out the content of each file in the command line.
 #
-# The expected output would be like the following:
+# The expected archive would be like the following:
 
 files = ['a.txt', 'b.txt', 'c.txt']
 

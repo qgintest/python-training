@@ -1,4 +1,4 @@
-# transform the following list below to the expected output
+# transform the following list below to the expected archive
 
 filenames = ["1.doc", "1.report", "1.presentation"]
 

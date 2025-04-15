@@ -10,4 +10,4 @@ def make_archive(filepaths, destination):
             archive.write(filepath, arcname=filepath.name)
 
 if __name__ == "__main__":
-    make_archive(filepaths=["files//a.txt", "files//b.txt"], destination="output//")
+    make_archive(filepaths=["files//a.txt", "files//b.txt"], destination="archive//")
